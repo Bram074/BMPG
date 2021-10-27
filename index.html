@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bram's Magnificent PICO generator</title>
+</head>
+<body>
+    <h1>Bram's Magnificent PICO generator</h1>
+    <form>
+        <label id="l1" for='P'>Patient</label>
+        <select name="Pfield" id="Pfield">
+            <option value="">No Field</option>
+            <option value="[Title]">Title</option>
+            <option value="[Title/Abstract]">Title/Abstract</option>
+            <option value="[Author]">Author</option>
+        </select>
+        <textarea name="P" id="P" cols="30" rows="10"></textarea>
+
+        <label id="l2" for='I'>Intervention</label>
+        <select name="Ifield" id="Ifield">
+            <option value="">No Field</option>
+            <option value="[Title]">Title</option>
+            <option value="[Title/Abstract]">Title/Abstract</option>
+            <option value="[Author]">Author</option>
+        </select>
+        <textarea name="I" id="I" cols="30" rows="10"></textarea>
+
+        <label id="l3" for='C'>Comparison</label>
+        <select name="Cfield" id="Cfield">
+            <option value="">No Field</option>
+            <option value="[Title]">Title</option>
+            <option value="[Title/Abstract]">Title/Abstract</option>
+            <option value="[Author]">Author</option>
+        </select>
+        <textarea name="C" id="C" cols="30" rows="10"></textarea>
+
+        <label id="l4" for='O'>Outcome</label>
+        <select name="Ofield" id="Ofield">
+            <option value="">No Field</option>
+            <option value="[Title]">Title</option>
+            <option value="[Title/Abstract]">Title/Abstract</option>
+            <option value="[Author]">Author</option>
+        </select>
+        <textarea name="O" id="O" cols="30" rows="10"></textarea>
+    </form>
+
+    <button id="generate">Generate</button>
+
+    <h2>Generated</h2>
+    <table id="table">
+        <tr>
+            <th>P</th>
+            <td id='PGen'>atient</td>
+        </tr>
+        <tr>
+            <th>I</th>
+            <td id="IGen">ntervention</td>
+        </tr>
+        <tr>
+            <th>C</th>
+            <td id="CGen">omparison</td>
+        </tr>
+        <tr>
+            <th>O</th>
+            <td id="OGen">utcome</td>
+        </tr>
+
+        <!--
+        <tr>
+            <th>Combined</th>
+            <td id="ComGen">Generated</td>
+        </tr>
+        -->
+
+    </table>
+
+</body>
+</html>
