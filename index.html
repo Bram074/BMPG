@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./styles.css">
+    <link media="screen and (min-width: 700px)" rel="stylesheet" href="./styles.css">
+    <link media="screen and (max-width: 700px)" rel="stylesheet" href="./smallScreen.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,6 +53,7 @@
     <button id="generate">Generate</button>
 
     <h2>Generated</h2>
+    <p>click to copy to clipboard</p>
     <table id="table">
         <tr>
             <th>P</th>
@@ -70,12 +72,10 @@
             <td id="OGen">utcome</td>
         </tr>
 
-        <!--
-        <tr>
+        <!-- <tr>
             <th>Combined</th>
-            <td id="ComGen">Generated</td>
-        </tr>
-        -->
+            <td id="ComGen">The combi of the above</td>
+        </tr> -->
 
     </table>
 

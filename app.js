@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    let patient = $('#P').val()
-    let intervention = $('#I').val()
+    let patient = ''
+    let intervention = ''
     let comparison = $('#C').val()
-    let outcome = $('#O').val()
+    let outcome = ''
     let combined = ''
 
     $('#generate').click(function() {
@@ -104,30 +104,49 @@ $(document).ready(function(){
         }
         $('#OGen').html(outcome)
 
+        
 
         // Combine
+
+        // if(patient != '()'){
+        //     combined = '(' + patient + ')'
+        // }
+
+        // if (intervention != '()'){
+        //     combined += ' AND (' + intervention + ')'
+        // }
+
+        // if (comparison != '()') {
+        //     combined += ' AND (' + comparison + ')'
+        // }
+
+        // if (outcome != '()'){
+        //     combined += ' AND (' + outcome + ')'
+        // }
         
-    })
-
-
-    $('#P').change(function(){
+        // $('#ComGen').html(combined)
 
     })
 
-    $('#I').change(function(){
 
+    $('#PGen').click(function(){
+        navigator.clipboard.writeText(patient)
+        alert('copied P to clipboard!')
     })
-
-    $('#C').change(function(){
-        
-    })
-
-    $('#O').change(function(){
-        
-    })
-
-
     
+    $('#IGen').click(function(){
+        navigator.clipboard.writeText(intervention)
+        alert('copied I to clipboard!')
+    })
 
+    $('#CGen').click(function(){
+        navigator.clipboard.writeText(comparison)
+        alert('copied C to clipboard!')
+    })
+
+    $('#OGen').click(function(){
+        navigator.clipboard.writeText(outcome)
+        alert('copied O to clipboard!')
+    })
 
   });
